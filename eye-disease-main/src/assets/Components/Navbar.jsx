@@ -6,13 +6,19 @@ const Navbar = () => {
 
   return (
     <div className="bg-white">
+
+      {/* Logo Section*/}
       <nav className="flex items-center z-100 gap-2 justify-between px-6 py-4 md:px-12 md:py-5 relative">
         <div className="flex  text-lg gap-1 items-center">
           <i className="fa-regular fa-eye"></i>
           <h1 className="text-lg">VisionAI</h1>
         </div>
+
+        {/*Desktop Navigation*/}
         <div className="md:flex gap-4 lg:gap-8 hidden font-light">
           <ul className="flex gap-2 lg:gap-5 items-center">
+
+            {/*Navigation Links*/}
             <NavLink className="px-2 py-0.5 rounded-sm w-max" to="/">
               Home
             </NavLink>
@@ -30,6 +36,8 @@ const Navbar = () => {
             </NavLink>
           </ul>
           <div>
+
+            {/*Get Started Button*/}
             <Link
               to="/login"
               className="bg-blue-500 rounded-md text-white px-8 py-1 w-max"
@@ -38,11 +46,17 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
+
+        {/*Mobile Menu Toggle Icon*/}
         <div className="block md:hidden" onClick={() => setToggle(!toggle)}>
           <i className="fa-solid fa-bars"></i>
         </div>
+
+        {/*Mobile Menu - Slides down on toggle*/}
           <div className={`absolute w-full  left-0 top-full py-2 block md:hidden  bg-white px-3 ${toggle?"translate-y-0 transition-transform duration-500":"transition-transform duration-500 -translate-y-100"}`}>
             <ul className="flex flex-col  gap-3 items-center">
+
+              {/* Mobile Navigation Links*/}
               <NavLink onClick={()=>setToggle(!toggle)}
                 className="px-2 py-1 rounded-sm border-b-1 border-gray-500 w-full text-center"
                 to="/"

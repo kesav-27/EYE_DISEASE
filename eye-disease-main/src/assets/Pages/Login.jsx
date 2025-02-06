@@ -9,6 +9,8 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
+  //handle form submission
+
   let onSubmit=(data)=>{
     console.log(data);
     
@@ -21,6 +23,7 @@ const Login = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="bg-white  border-1 rounded-md border-gray-300"
         >
+           {/* Header Section*/}  
           <div className="">
             <h1 className="text-lg font-semibold text-center px-5 py-4">
               Welcome To Upto Skills
@@ -34,6 +37,7 @@ const Login = () => {
               </button>
             </div>
           </div>
+          {/*Form Fields*/}
           <div className="px-3 pb-8 pt-3">
             {isSignup ? (
               <div className="flex flex-col gap-1 px-3 mb-2">
@@ -100,6 +104,7 @@ const Login = () => {
               <></>
             )}
             {isSignup ? (
+              //Submit Button
              <div className="px-3">
               <button type="submit" className="w-full mt-3 bg-blue-500 text-white rounded px-2 py-1 cursor-pointer">
                 Register

@@ -2,25 +2,34 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const Contact = () => {
+  //Initialize react-hook-form
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  //form submission handler
   let onSubmit=(data)=>{
     console.log(data);
     
   }
   return (
     <div>
+         {/* Contact header section*/}
       <div className="bg-gray-500/80 px-12 py-12  lg:py-24  lg:pb-32 text-center text-white flex flex-col gap-3">
         <h1 className="text-3xl">Contact Us</h1>
         <p>Get in touch with our team for any questions or support</p>
       </div>
+
+      {/* Contact form container*/}
       <div className="flex flex-col md:flex-row lg:px-28 lg:py-12 px-4 py-3 justify-center bg-white gap-5 ">
+
+      {/* Contact information section*/}
       <div className="bg-gray-500/20 p-8 rounded-md">
         <ul className="flex flex-col gap-3">
           <h1 className="text-lg mb-2">Get in Touch</h1>
+
+          {/* Email contact*/}
           <li className="flex items-start gap-2">
           <div className="text-blue-500">
           <i className="fa-regular fa-envelope"></i>
@@ -30,6 +39,8 @@ const Contact = () => {
               <p>contact@visionai.com</p>
             </div>
           </li>
+
+          {/* Phone contact*/}
           <li className="flex items-start gap-2">
           <div  className="text-blue-500">
           <i className="fa-solid fa-phone"></i>
@@ -43,6 +54,8 @@ const Contact = () => {
           <div  className="text-blue-500">
           <i className="fa-solid fa-location-dot"></i>
           </div>
+
+          {/* Address contact*/}
             <div>
               <p>Address</p>
               <p>123 Innovation DriveSilicon Valley, CA 94025</p>
@@ -50,8 +63,12 @@ const Contact = () => {
           </li>
         </ul>
       </div>
+
+      {/*Contact form section*/}
       <div className=" basis-[50%] bg-white shadow-xl border-1 border-gray-500/20 p-3 rounded-md">
         <form onSubmit={handleSubmit(onSubmit)}>
+
+        {/* First Name field with validation*/}
         <div className="flex flex-col gap-1 px-3 mb-2">
                 <label htmlFor="">First Name</label>
                 <input
@@ -69,6 +86,8 @@ const Contact = () => {
                 />
                 { errors.name && <p className="text-sm text-red-500">{errors.name.message}</p>}
               </div>
+
+              {/* Last Name field with validation*/}
               <div className="flex flex-col gap-1 px-3 mb-2">
                 <label htmlFor="">Last Name</label>
                 <input
@@ -87,6 +106,7 @@ const Contact = () => {
                 { errors.surname && <p className="text-sm text-red-500">{errors.surname.message}</p>}
               </div>
               
+              {/* Email field with validation*/}
             <div className="flex flex-col gap-1 px-3 mb-2">
               <label htmlFor="">Email</label>
               <input
@@ -105,10 +125,14 @@ const Contact = () => {
               
               {errors.email && <p className="text-sm text-red-500">{errors.email.message}</p>}
             </div>
+
+            {/* Message text area*/}
             <div className="flex flex-col gap-1 px-3 mb-2">
               <label htmlFor="">Message</label>
               <textarea name="" id="" placeholder="Message"  className=" border px-2 py-1 rounded-sm outline-none resize-none" ></textarea>
             </div>
+
+            {/*Submit button*/}
             <div className="px-3">
               <button type="submit" className="w-full mt-3 bg-blue-500 text-white rounded px-2 py-1 cursor-pointer">
                 Submit

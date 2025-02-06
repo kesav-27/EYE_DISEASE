@@ -5,10 +5,14 @@ import homeimg1 from '../img/home2.jpeg';
 const Home = () => {
   return (
     <div className="lg:px-32 lg:py-12 p-5">
+
+      {/* Image gallery section*/}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
         <img className="rounded-md shadow-lg hover:scale-95 duration-500 transition-all" src={homeImg} alt="" />
         <img className="rounded-md shadow-lg hover:scale-95 duration-500 transition-all" src={homeimg1} alt="" />
       </div>
+
+      {/*Description section*/}
       <p className="mt-5 px-2 text-sm lg:text-base lg:px-6">Vision AI - Mobile Eye Disease Detection Tagline: "Scan your eyes
         anywhere, anytime with Vision AI!" Description: "Vision AI uses
         AI-powered mobile technology to detect potential eye diseases like
