@@ -13,7 +13,7 @@ const Footer = () => {
           <ul className="flex flex-col gap-2">
             <li className="flex items-center gap-1">
               <i className="fa-regular fa-eye text-blue-500"></i>
-              <p className="text-white">VisionAI</p>
+              <p className="text-white">VzenCare</p>
             </li>
             <li>
               <p className="text-base">
@@ -33,13 +33,13 @@ const Footer = () => {
           {/*Column 3: Contact info*/}
           <ul>
             <li className="text-white text-lg">Contact</li>
-            <li>contact@visionai.com</li>
+            <li>contact@VzenCare.com</li>
             <li>+1 (555) 123-4567</li>
           </ul>
         </div>
         {/*Copyright Section*/}
         <div className="py-8 text-center">
-          <p>© 2024 VisionAI. All rights reserved.</p>
+          <p>© 2024 VzenCare. All rights reserved.</p>
         </div>
       </div>
     </div>
