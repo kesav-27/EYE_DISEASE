@@ -11,7 +11,7 @@ const Navbar = () => {
       <nav className="flex items-center z-100 gap-2 justify-between px-6 py-4 md:px-12 md:py-5 relative">
         <div className="flex  text-lg gap-1 items-center">
           <i className="fa-regular fa-eye"></i>
-          <h1 className="text-lg">VisionAI</h1>
+          <h1 className="text-lg">VzenCare</h1>
         </div>
 
         {/*Desktop Navigation*/}
